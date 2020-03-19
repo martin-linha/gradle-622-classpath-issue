@@ -1,0 +1,5 @@
+buildscript {
+    dependencies {
+        classpath "pl.project13.maven:git-commit-id-plugin:4.0.0"
+    }
+}

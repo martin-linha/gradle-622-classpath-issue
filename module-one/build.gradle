@@ -1,0 +1,17 @@
+import org.apache.maven.project.MavenProject;
+
+buildscript {
+    dependencies {
+        classpath "com.phoenixnap.oss:springmvc-raml-plugin:2.0.3"
+        classpath "pl.project13.maven:git-commit-id-plugin:4.0.0"
+    }
+}
+
+
+task printClass {
+    doLast {
+        Class klass = MavenProject.class;
+        URL location = klass.getResource('/' + klass.getName().replace('.', '/') + ".class")
+        println "MavenProject class location:" + location
+    }
+}
